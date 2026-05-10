@@ -340,8 +340,7 @@ function App() {
           <h2>Maintenance Support</h2>
           <ul>
             <li>
-              After completion of the base project requirements, free maintenance
-              support will be provided for 1 month.
+              Support of 2 months for bug fixes, minor updates, and maintenance.
             </li>
             <li>
               Maintenance support only includes minor bug fixes and small
