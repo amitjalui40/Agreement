@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import './App.css'
 import html2canvas from 'html2canvas'
 import jsPDF from 'jspdf'
+import { AGREEMENT_PRESET } from './agreementPreset'
 
 const createClientSigner = () => ({
   id: globalThis.crypto.randomUUID(),
@@ -14,7 +15,7 @@ const createClientSigner = () => ({
 
 function App() {
   const [formData, setFormData] = useState({
-    projectName: 'Exp Live Entertainment Website / Design & Development Project',
+    projectName: '',
     agreementDate: '',
     freelancerContactName: '',
     freelancerContactEmail: '',
@@ -26,6 +27,7 @@ function App() {
     freelancer1Date: '',
     freelancer2SignatureText: '',
     freelancer2Date: '',
+    ...AGREEMENT_PRESET.formDefaults,
   })
   const [clientSigners, setClientSigners] = useState([
     createClientSigner(),
@@ -34,6 +36,7 @@ function App() {
   const [signaturePreviews, setSignaturePreviews] = useState({
     freelancer1: '',
     freelancer2: '',
+    ...AGREEMENT_PRESET.signaturePreviewsDefaults,
   })
   const [saveStatus, setSaveStatus] = useState({ state: 'idle', message: '' })
   const [isExporting, setIsExporting] = useState(false)
