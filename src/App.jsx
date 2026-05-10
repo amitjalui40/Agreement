@@ -3,6 +3,7 @@ import './App.css'
 import html2canvas from 'html2canvas'
 import jsPDF from 'jspdf'
 import { AGREEMENT_PRESET } from './agreementPreset'
+import { SignatureCanvasPreview } from './SignatureCanvasPreview'
 
 const createClientSigner = () => ({
   id: globalThis.crypto.randomUUID(),
@@ -217,10 +218,9 @@ function App() {
   const renderSignaturePreview = (role, fallbackText) => {
     if (signaturePreviews[role]) {
       return (
-        <img
+        <SignatureCanvasPreview
           src={signaturePreviews[role]}
-          alt={`${role} signature`}
-          className="signature-preview"
+          ariaLabel={`${role} signature`}
         />
       )
     }
@@ -235,10 +235,9 @@ function App() {
   const renderClientSignaturePreview = (signer, index) => {
     if (signer.signaturePreview) {
       return (
-        <img
+        <SignatureCanvasPreview
           src={signer.signaturePreview}
-          alt={`client signer ${index + 1} signature`}
-          className="signature-preview"
+          ariaLabel={`client signer ${index + 1} signature`}
         />
       )
     }

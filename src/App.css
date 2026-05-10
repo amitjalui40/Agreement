@@ -194,6 +194,14 @@ input {
   padding-bottom: 0.25rem;
 }
 
+.signature-preview-canvas {
+  display: block;
+  max-width: 220px;
+  max-height: 70px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
 .typed-signature {
   margin-top: 0.9rem;
   min-height: 36px;
