@@ -14,7 +14,7 @@ const createClientSigner = () => ({
 
 function App() {
   const [formData, setFormData] = useState({
-    projectName: 'Exp.Live Website / Design & Development Project',
+    projectName: 'Exp Live Entertainment Website / Design & Development Project',
     agreementDate: '',
     freelancerContactName: '',
     freelancerContactEmail: '',
@@ -251,11 +251,11 @@ function App() {
     <div className={`page ${isExporting ? 'exporting' : ''}`}>
       <main className="agreement" ref={agreementRef}>
         <header className="agreement-header">
-          <h1>Project Agreement - Exp.Live</h1>
+          <h1>Project Agreement - Exp Live Entertainment</h1>
           <p>
             This agreement is between both parties for the design and development
-            work by Amit Jalui and Karankumar Mailaram for Exp.Live, an event
-            organizer company (Exp.Live Team).
+            work by Amit Jalui and Karankumar Mailaram for Exp Live Entertainment, an event
+            organizer company (Exp Live Entertainment Team).
           </p>
         </header>
 
@@ -619,7 +619,7 @@ function App() {
             {clientSigners.map((signer, index) => (
               <article key={signer.id}>
                 <div className="client-title-row">
-                  <p>Company Name: Exp.Live</p>
+                  <p>Company Name: Exp Live Entertainment</p>
                   {clientSigners.length > 1 && (
                     <button
                       type="button"

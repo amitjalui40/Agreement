@@ -1,4 +1,4 @@
-# Agreement Website - Exp.Live
+# Agreement Website - Exp Live Entertainment
 
 This project is a printable agreement website built using React + Vite.
 
